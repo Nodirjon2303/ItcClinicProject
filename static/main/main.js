@@ -1,5 +1,5 @@
-var link = 'http://127.0.0.1:8000/'
-// var link = 'http://137.184.201.8:7777/'
+// var link = 'http://127.0.0.1:8000/'
+var link = 'http://137.184.201.8:1212/'
 // var link = 'http://e-cardiodiagnosis.uz/'
 var preloader = document.getElementById('page-preloader');
 
