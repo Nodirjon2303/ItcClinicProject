@@ -1,0 +1,105 @@
+{% extends 'doctormain.html' %}
+
+
+{% block nodir %}
+
+    <div class="container">
+        <form method="POST">
+            {% csrf_token %}
+            <h2 class="text-center">Yangi Bemor qabul qilish </h2>
+            <div class="row jumbotron">
+                <div class="col-sm-6 form-group">
+                    <label for="last_name">Familyasi</label>
+                    <input type="text" class="form-control" name="last_name" id="name-f"
+                           placeholder="Familyasini kiritinig" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label for="first_name">Ismi</label>
+                    <input type="text" class="form-control" name="first_name" id="name-l" placeholder="Ismini kiriting"
+                           required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label for="first_name">Sharifi</label>
+                    <input type="text" class="form-control" name="middle_name" id="name-l" placeholder="Sharifini kiriting"
+                           required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label for="Date">Tugilgan Sanasi</label>
+                    <input type="Date" name="dob" class="form-control" id="Date" placeholder="Tug'ilgan sanangizni kiriting" required>
+                </div>
+
+                <div class="col-sm-2 form-group">
+                    <label for="cod">Uzbekistan</label>
+                    <select class="form-control browser-default custom-select">
+                        <option data-countryCode="UZ" value="998">+998</option>
+                    </select>
+                </div>
+                <div class="col-sm-4 form-group">
+                    <label for="tel">Uy telefoni</label>
+                    <input type="tel" name="home_phone" class="form-control" id="tel"
+                           placeholder="Uy telefonini kiriting." required>
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="cod">Uzbekistan</label>
+                    <select class="form-control browser-default custom-select">
+                        <option data-countryCode="UZ" value="998">Uzb (+998)</option>
+                    </select>
+                </div>
+                <div class="col-sm-4 form-group">
+                    <label for="tel">Ish telefoni</label>
+                    <input type="tel" name="work_phone" class="form-control" id="tel"
+                           placeholder="Ish telefonini kiriting." required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label for="Region">Viloyat</label>
+                    <select name="viloyat" class="form-control custom-select browser-default">
+                        <option value="Toshkent">Toshkent shahri</option>
+                        <option value="Andijon">Andijon viloyati</option>
+                        <option value="Buxoro">Buxoro viloyati</option>
+                        <option value="Farg'ona">Farg'ona viloyati</option>
+                        <option value="Jizzax">Jizzax viloyati</option>
+                        <option value="Xorazm">Xorazm viloyati</option>
+                        <option value="Namangan">Namangan viloyati</option>
+                        <option value="Navoiy">Navoiy viloyati</option>
+                        <option value="Qashqadaryo">Qashqadaryo viloyati</option>
+                        <option value="Qoraqalpog'iston">Qoraqalpog'iston Respublikasi</option>
+                        <option value="Samarqand">Samarqand viloyati</option>
+                        <option value="Sirdaryo">Sirdaryo viloyati</option>
+                        <option value="Surxondaryo">Surxondaryo viloyati</option>
+                        <option value="Toshkent">Toshkent viloyati</option>
+                    </select>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label for="address-1">Tuman</label>
+                    <input type="address" class="form-control" name="tuman" id="address-1"
+                           placeholder="Tumanni kiriting" required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label for="address-2">addresini kiriting</label>
+                    <input type="address" class="form-control" name="address" id="address-2"
+                           placeholder="Qishloq/Mahalla nomi" required>
+                </div>
+
+
+
+                <div class="col-sm-4 form-group">
+                    <label for="work">Ish joyi</label>
+                    <input type="Work" name="work_palace" class="form-control" id="work"
+                           placeholder="Bemorning ish joyini kirting">
+                </div>
+                <div class="col-sm-2 form-group">
+                    <label for="sex">Jinsi</label>
+                    <select id="sex" name="gen" class="form-control browser-default custom-select">
+                        <option value="Erkak">Erkak</option>
+                        <option value="Ayol">Ayol</option>
+                    </select>
+                </div>
+
+                <div class="col-sm-12 form-group mb-0">
+                    <button class="btn btn-primary float-right" type="submit">Keyingisi</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

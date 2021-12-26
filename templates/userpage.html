@@ -1,0 +1,29 @@
+{% extends 'extend.html' %}
+{% block nodir %}
+<form action="" method="post">
+    {% csrf_token %}
+<table class="table">
+    <tr>
+        <th colspan="2">Administrator login va parolini o'zgartieish oynasi</th>
+    </tr>
+    <tr>
+        <td>
+            Joriy parol
+        </td>
+        <td><input name="pass1" type="text"></td>
+    </tr>
+    <tr>
+        <td>Yangi Parol</td>
+        <td><input name="newpass1" type="text"></td>
+    </tr>
+    <tr>
+        <td>Parolni qayta kiriting</td>
+        <td><input name="newpass2" type="text"></td>
+    </tr>
+</table>
+<button type="submit" class="ml-4 btn btn-primary">Saqlash</button>
+</form>
+
+<p>{{ error }}</p>
+
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends 'doctormain.html' %}
+{% block nodir %}
+    <div class="patient">
+        <div class="buttons1">
+            <button class="btn1 btn-primary">Умумий малумотлари</button>
+            <button class="btn1 btn-primary" onclick="patient_shikoyat({{ 1 }}, {{ patient.id }})">Шикоят ва анамнез малумотлари
+            </button>
+            <button class="btn1 btn-primary " onclick="patient_shikoyat({{ 2 }}, {{ patient.id }})">Бирламчи кўрик</button>
+            <button class="btn1 btn-primary" onclick="patient_shikoyat({{ 3 }}, {{ patient.id }})">Лабаратория текшируви</button>
+            <button class="btn1 btn-primary" onclick="patient_shikoyat({{ 4 }}, {{ patient.id }})">ЕКГ</button>
+            <button class="btn1 btn-primary" onclick="patient_shikoyat({{ 5 }} , {{ patient.id }})">EXO</button>
+            <button class="btn1 btn-primary" onclick="patient_shikoyat({{ 6 }}, {{ patient.id }})">Ёндош касалликлар</button>
+            <button class="btn1 btn-primary" onclick="patient_shikoyat({{ 7 }}, {{ patient.id }})">Текширувлар таҳлили ва якуний
+                ташхислаш
+            </button>
+
+        </div>
+
+        <div class="patient__table1">
+            <table id="patient_table ">
+                <tr >
+                    <td colspan="90">Bemor haqida malumotlar</td>
+                </tr>
+                <tr>
+                    <td>Ismi:</td>
+                    <td>{{ patient.first_name }}</td>
+                </tr>
+                <tr>
+                    <td>Familyasi:</td>
+                    <td>{{ patient.last_name }}</td>
+                </tr>
+                <tr>
+                    <td>Sharifi:</td>
+                    <td>{{ patient.middle_name }}</td>
+                </tr>
+                <tr>
+                    <td>Tugilgan sanasi:</td>
+                    <td>{{ patient.birthday }}</td>
+                </tr>
+                <tr>
+                    <td>Uy telefoni:</td>
+                    <td>{{ patient.home_phone }}</td>
+                </tr>
+                <tr>
+                    <td>Ish telefoni:</td>
+                    <td>{{ patient.work_phone }}</td>
+                </tr>
+                <tr>
+                    <td>Viloyasi</td>
+                    <td>{{ patient.region }}</td>
+                </tr>
+                <tr>
+                    <td>Bemorning tumani:</td>
+                    <td>{{ patient.city }}</td>
+                </tr>
+                <tr>
+                    <td>Bemorning manzili:</td>
+                    <td>{{ patient.adress }}</td>
+                </tr>
+                <tr>
+                    <td>Bemorning jinsi:</td>
+                    <td>{{ patient.gen }}</td>
+                </tr>
+                <tr>
+                    <td>Bemorning ish joyi:</td>
+                    <td>{{ patient.work_place }}</td>
+                </tr>
+                <tr>
+                    <td>Bemorning kelgan sanasi:</td>
+                    <td>{{ patient.created_data }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="comment" , id="patient-comment">
+
+        </div>
+
+    </div>
+    <table class="table patient__tb" id="finalresult">
+
+    </table>
+
+<div style="margin-bottom: 35px" id="savebutton">
+
+</div>
+    <div style="margin-top: 65px; margin-bottom: 45px; color: red; " id="statuspatient">
+
+    </div>
+{% endblock %}
+
+<div class="preloader">
+    <div class="sk-folding-cube">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+    </div>
+</div>
+
+

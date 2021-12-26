@@ -1,0 +1,215 @@
+{% extends 'extend.html' %}
+{% block nodir %}
+    {% for i in simptokompleksdata %}
+        <form style="margin: 25px 25px; background-color: skyblue" action="" method="post"
+              enctype="multipart/form-data">
+            {% csrf_token %}
+            <div style="text-align: center">
+                <h3>Информатив симптокомплекслар гуруҳини юклаш</h3>
+                <input name="myfile" class="navbar-brand" type="file"
+                       accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                       id="colorblue">
+                <button type="submit">Faylni yuklash</button>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+        </form>
+        <table class="table">
+            <tr>
+                <th colspan="90" id="nodirjon">Информатив симптокомплекслар</th>
+            </tr>
+            <tr>
+                <td class="text-primary">N</td>
+                <td>x1</td>
+                <td>x2</td>
+                <td>x3</td>
+                <td>x4</td>
+                <td>x5</td>
+                <td>x6</td>
+                <td>x7</td>
+                <td>x8</td>
+                <td>x9</td>
+                <td>x10</td>
+                <td>x11</td>
+                <td>x12</td>
+                <td>x13</td>
+                <td>x14</td>
+                <td>x15</td>
+                <td>x16</td>
+                <td>x17</td>
+                <td>x18</td>
+                <td>x19</td>
+                <td>x20</td>
+                <td>x21</td>
+                <td>x22</td>
+                <td>x23</td>
+                <td>x24</td>
+                <td>x25</td>
+                <td>x26</td>
+                <td>x27</td>
+                <td>x28</td>
+                <td>x29</td>
+                <td>x30</td>
+                <td>x31</td>
+                <td>x32</td>
+                <td>x33</td>
+                <td>x34</td>
+                <td>x35</td>
+                <td>x36</td>
+                <td>x37</td>
+                <td>x38</td>
+                <td>x39</td>
+                <td>x40</td>
+                <td>x41</td>
+                <td>x42</td>
+                <td>x43</td>
+                <td>x44</td>
+                <td>x45</td>
+                <td>x46</td>
+                <td>x47</td>
+                <td>x48</td>
+                <td>x49</td>
+                <td>x50</td>
+                <td>x51</td>
+                <td>x52</td>
+                <td>x53</td>
+                <td>x54</td>
+                <td>x55</td>
+                <td>x56</td>
+                <td>x57</td>
+                <td>x58</td>
+                <td>x59</td>
+                <td>x60</td>
+                <td>x61</td>
+                <td>x62</td>
+                <td>x63</td>
+                <td>x64</td>
+                <td>x65</td>
+                <td>x66</td>
+                <td>x67</td>
+                <td>x68</td>
+                <td>x69</td>
+                <td>x70</td>
+                <td>x71</td>
+                <td>x72</td>
+                <td>x73</td>
+                <td>x74</td>
+                <td>x75</td>
+                <td>x76</td>
+                <td>x77</td>
+                <td>x78</td>
+                <td>x79</td>
+                <td>x80</td>
+                <td>x81</td>
+                <td>x82</td>
+                <td>x83</td>
+                <td>x84</td>
+                <td>x85</td>
+                <td>x86</td>
+                <td>x87</td>
+                <td>x88</td>
+                <td>x89</td>
+            </tr>
+            {% for j in i.L %}
+                <tr>
+                    <td class="text-primary">{{ j.id }}</td>
+                    <td>{{ j.x1 }}</td>
+                    <td>{{ j.x2 }}</td>
+                    <td>{{ j.x3 }}</td>
+                    <td>{{ j.x4 }}</td>
+                    <td>{{ j.x5 }}</td>
+                    <td>{{ j.x6 }}</td>
+                    <td>{{ j.x7 }}</td>
+                    <td>{{ j.x8 }}</td>
+                    <td>{{ j.x9 }}</td>
+                    <td>{{ j.x10 }}</td>
+                    <td>{{ j.x11 }}</td>
+                    <td>{{ j.x12 }}</td>
+                    <td>{{ j.x13 }}</td>
+                    <td>{{ j.x14 }}</td>
+                    <td>{{ j.x15 }}</td>
+                    <td>{{ j.x16 }}</td>
+                    <td>{{ j.x17 }}</td>
+                    <td>{{ j.x18 }}</td>
+                    <td>{{ j.x19 }}</td>
+                    <td>{{ j.x20 }}</td>
+                    <td>{{ j.x21 }}</td>
+                    <td>{{ j.x22 }}</td>
+                    <td>{{ j.x23 }}</td>
+                    <td>{{ j.x24 }}</td>
+                    <td>{{ j.x25 }}</td>
+                    <td>{{ j.x26 }}</td>
+                    <td>{{ j.x27 }}</td>
+                    <td>{{ j.x28 }}</td>
+                    <td>{{ j.x29 }}</td>
+                    <td>{{ j.x30 }}</td>
+                    <td>{{ j.x31 }}</td>
+                    <td>{{ j.x32 }}</td>
+                    <td>{{ j.x33 }}</td>
+                    <td>{{ j.x34 }}</td>
+                    <td>{{ j.x35 }}</td>
+                    <td>{{ j.x36 }}</td>
+                    <td>{{ j.x37 }}</td>
+                    <td>{{ j.x38 }}</td>
+                    <td>{{ j.x39 }}</td>
+                    <td>{{ j.x40 }}</td>
+                    <td>{{ j.x41 }}</td>
+                    <td>{{ j.x42 }}</td>
+                    <td>{{ j.x43 }}</td>
+                    <td>{{ j.x44 }}</td>
+                    <td>{{ j.x45 }}</td>
+                    <td>{{ j.x46 }}</td>
+                    <td>{{ j.x47 }}</td>
+                    <td>{{ j.x48 }}</td>
+                    <td>{{ j.x49 }}</td>
+                    <td>{{ j.x50 }}</td>
+                    <td>{{ j.x51 }}</td>
+                    <td>{{ j.x52 }}</td>
+                    <td>{{ j.x53 }}</td>
+                    <td>{{ j.x54 }}</td>
+                    <td>{{ j.x55 }}</td>
+                    <td>{{ j.x56 }}</td>
+                    <td>{{ j.x57 }}</td>
+                    <td>{{ j.x58 }}</td>
+                    <td>{{ j.x59 }}</td>
+                    <td>{{ j.x60 }}</td>
+                    <td>{{ j.x61 }}</td>
+                    <td>{{ j.x62 }}</td>
+                    <td>{{ j.x63 }}</td>
+                    <td>{{ j.x64 }}</td>
+                    <td>{{ j.x65 }}</td>
+                    <td>{{ j.x66 }}</td>
+                    <td>{{ j.x67 }}</td>
+                    <td>{{ j.x68 }}</td>
+                    <td>{{ j.x69 }}</td>
+                    <td>{{ j.x70 }}</td>
+                    <td>{{ j.x71 }}</td>
+                    <td>{{ j.x72 }}</td>
+                    <td>{{ j.x73 }}</td>
+                    <td>{{ j.x74 }}</td>
+                    <td>{{ j.x75 }}</td>
+                    <td>{{ j.x76 }}</td>
+                    <td>{{ j.x77 }}</td>
+                    <td>{{ j.x78 }}</td>
+                    <td>{{ j.x79 }}</td>
+                    <td>{{ j.x80 }}</td>
+                    <td>{{ j.x81 }}</td>
+                    <td>{{ j.x82 }}</td>
+                    <td>{{ j.x83 }}</td>
+                    <td>{{ j.x84 }}</td>
+                    <td>{{ j.x85 }}</td>
+                    <td>{{ j.x86 }}</td>
+                    <td>{{ j.x87 }}</td>
+                    <td>{{ j.x88 }}</td>
+                    <td>{{ j.x89 }}</td>
+                </tr>
+            {% endfor %}
+
+
+        </table>
+
+    {% endfor %}
+{% endblock %}

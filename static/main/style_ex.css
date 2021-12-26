@@ -1,0 +1,371 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: black;
+    z-index: 999;
+    transition: all 2s;
+    opacity: 1;
+    visibility: visible;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.loader span {
+    position: absolute;
+    font-size: 33px;
+    background: -webkit-linear-gradient(to right );
+
+    background-image: linear-gradient(45deg, #478be0, #ff7473,#ffc952);
+    /* -webkit-background-clip: text; */
+    -webkit-text-fill-color: transparent;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* .persent {
+
+} */
+
+.done {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader-first,
+.preloader-second,
+.preloader-third {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.preloader-first {
+    border-bottom: 3px solid #ff7473;
+    animation: 1s first infinite linear;
+}
+
+.preloader-second {
+    border-right: 3px solid #ffc952;
+    animation: 1s second infinite linear;
+}
+
+.preloader-third {
+    border-top: 3px solid #478be0;
+    animation: 1s third infinite linear;
+}
+
+@keyframes first {
+    0% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    } 100% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+}
+
+@keyframes second {
+    0% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    } 100% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+}
+
+@keyframes third {
+    0% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    } 100% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+}
+
+
+
+/* .sign a {
+    padding: 10px 20px;
+    background-color: skyblue;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 15px;
+    line-height: 60px;
+} */
+
+.creators__items {
+    display: flex;
+    padding: 20px 0;
+}
+.nodirjon {
+    width: 10%;
+    height: 60px;
+    margin-right: 10px;
+}
+/* .img  {
+    width: 100%;
+    height: 100%;
+} */
+/* #colorblue{
+    background-color: skyblue;
+} */
+.name {
+    width: 10%;
+    padding: 10px;
+}
+.about {
+    width: 40%;
+    padding: 10px;
+}
+
+.contacts {
+    width: 40%;
+    padding: 10px;
+}
+.tel {
+    margin-bottom: 10px;
+}
+body {
+    background-color: white;
+}
+
+/* btns */
+
+
+
+
+
+/* .btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center; 
+    background-color: skyblue;
+
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid skyblue;
+    margin-right: 20px;
+} */
+.patient {
+    display: flex;
+    width: 95%;
+    margin: 50px auto;
+    padding-bottom: 50px    ;
+    justify-content: space-between;
+}
+
+.buttons1 {
+    width: 20%;
+
+}
+
+.btn1 {
+    cursor: pointer;
+    outline: none;
+
+    text-decoration: none;
+    text-align: center;
+    background-color: skyblue;
+    display: inline-block;
+    width: 100%;
+
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid skyblue;
+    margin-bottom: 10px;
+}
+
+.patient__table {
+    width: 55%;
+    position: relative;
+}
+
+.patient__table table {
+    width: 100%;
+}
+
+.patient__table tr, .patient__table td {
+    border: 1px solid black;
+
+}
+
+.comment {
+    width: 20%;
+    color: #40ff00;
+}
+
+.table th,
+td {
+    text-align: center;
+    padding: 5px 8px;
+    border: 1px solid #fff;
+}
+
+.table tr:nth-child(odd) {
+    background-color: skyblue;
+}
+
+.table tr:nth-child(even) {
+    background-color: #fff;
+}
+
+#nodirjon {
+    text-align: left;
+    padding-left: 500px;
+    font-size: 25px;
+}
+.table{
+    margin-left: 25px;
+    margin-top: 50px;
+
+}
+#salom {
+    margin: 25px 25px;
+}
+.topnav a:hover {
+    border-bottom: 3px solid red;
+}
+
+label {
+    font-weight: 600;
+    color: #555;
+}
+body {
+  background: whitesmoke;
+}
+
+.tugallanmagan {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tugallanmagan, .tugallanmagan tr,.tugallanmagan th, .tugallanmagan td {
+    border: 1px solid black;
+}
+.tugallanmagan th {
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: lightblue;
+    font-size: 30px;
+    width: 100%;
+}
+
+.tugallanmagan td a{
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+}
+#FIO{
+    font-weight: 900;
+    font-size: 24px;
+}
+.tugallanmagan td a:hover {
+    color: #a50101;
+}
+
+/*prev next tawxislaw*/
+
+.next {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    width: 90px;
+    height: 45px;
+    background-color: rgba(139, 190, 227, 0.76);
+    position: absolute;
+    right: 0;
+    bottom: -60px;
+    transition: all 0.2s linear;
+}
+
+.next:hover {
+    transform: scale(1.1,1.1);
+    box-shadow: 3px 3px 8px #000;
+    background-color: rgba(0, 149, 255, 0.76);
+}
+.prev {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    width: 90px;
+    height: 45px;
+    background-color: rgba(139, 190, 227, 0.76);
+    position: absolute;
+    left: 0;
+    bottom: -60px;
+    transition: all 0.2s linear;
+}
+.prev:hover {
+    transform: scale(1.1,1.1);
+    box-shadow: -3px 3px 8px #000;
+    background-color: rgba(0, 149, 255, 0.76);
+}
+.diagnos {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    width: 90px;
+    height: 45px;
+    background-color: rgba(139, 190, 227, 0.76);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -60px;
+    transition: all 0.2s linear;
+}
+.diagnos:hover {
+
+    box-shadow: 0px 3px 8px #000;
+    background-color: rgba(0, 149, 255, 0.76);
+}
+.patient__tb {
+    width: 100%;
+    margin: 0;
+}
+.patient__tb input {
+
+    width: 70%;
+
+    height: 100%;
+    padding: 3px 6px;
+}
+
+.patient__tb td {
+    width: 50%;
+}
+
+.patient__btn {
+    outline: none;
+    padding: 10px 25px;
+    position: absolute;
+    right: 40px;
+    background-color: red;
+    color: #fFF;
+    border: none;
+    border-radius: 5px  ;
+cursor: pointer;
+}

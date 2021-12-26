@@ -1,0 +1,30 @@
+{% extends 'doctormain.html' %}
+{% block nodir %}
+
+    <table class="table">
+
+    <tr>
+        <th colspan="6"><h3>Якуний ташхис қўйилган беморларни кўриш ойнаси</h3></th>
+    </tr>
+    <tr>
+        <td>№</td>
+        <td>Беморнинг ФИО</td>
+        <td>Туғилган санаси</td>
+        <td>Қабул келган санаси</td>
+        <td>Якуний ташхис</td>
+        <td>Касаллик тарихини юклаш</td>
+    </tr>
+    {% for patient in patients %}
+        <tr>
+        <td>{{ patient.sanoq }}</td>
+        <td>{{ patient.name }}</td>
+        <td>{{ patient.birthday }}</td>
+        <td>{{ patient.created_data }}</td>
+        <td>{{ patient.final_diagnos }}</td>
+        <td><a href="{{ patient.document }}" download=""> .doc форматда юклаш </a></td>
+        </tr>
+
+    {% endfor %}
+    </table>
+
+{% endblock %}

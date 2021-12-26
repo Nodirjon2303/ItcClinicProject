@@ -1,0 +1,39 @@
+{% extends 'extend.html' %}
+{% block nodir %}
+    <form id="salom" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="text-center text-primary">
+            <h2 class="pb-4" style="text-align: center">Еталон ўқув танланмани юкланг</h2>
+            <input type="file" class="btn bg-primary pt-2"
+                   accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+                   name="myfile">
+            <button class="btn btn-primary" type="submit">Faylni yuklash</button>
+            <br>
+            <br>
+            <p class="pt-4" style="color: red">{{ status }}</p>
+        </div>
+    </form>
+    <div class="buttons" >
+        <div>
+            <a onclick="render_class('1-class')" href="#" class="btn btn-primary m-2">Class1</a>
+        </div>
+        <div>
+            <a onclick="render_class('2-class')" href="#" class="btn btn-primary m-2">Class2</a>
+        </div>
+        <div>
+            <a onclick="render_class('3-class')" href="#" class="btn btn-primary m-2">Class3</a>
+        </div>
+        <div>
+            <a onclick="render_class('4-class')" href="#" class="btn btn-primary m-2">Class4</a>
+        </div>
+        <div>
+            <a onclick="render_class('5-class')" href="#" class="btn btn-primary m-2">Class5</a>
+        </div>
+    </div>
+        <table class="table" id="nimadir">
+
+
+        </table>
+
+{% endblock %}
