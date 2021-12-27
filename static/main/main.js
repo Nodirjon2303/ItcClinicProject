@@ -25,7 +25,7 @@ function render_class(clas) {
                 preloader.classList.add('done')
                 datas = data['data']
                 html = `<tr>
-        <th colspan="90" id="nodirjon">Эталон ўқув танлама </th>
+        <th colspan="90" id="nodirjon"> Эталон ўқув танлама </th>
     </tr>
     <tr>
         <td style="color: green">N</td>
