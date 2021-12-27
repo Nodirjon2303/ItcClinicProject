@@ -23,7 +23,7 @@ def doctors_only(function):
     def wrap(request, *args, **kwargs):
 
         profile = request.user
-        if profile.status and profile.status == 'doctor':
+        if profile.username and profile.status and profile.status == 'doctor':
             return function(request, *args, **kwargs)
         else:
             return redirect('main')
@@ -35,7 +35,7 @@ def admins_only(function):
     @wraps(function)
     def wrap(request, *args, **kwargs):
         profile = request.user
-        if profile.status and profile.status == 'admin':
+        if profile.username and profile.status and profile.status == 'admin':
             return function(request, *args, **kwargs)
         else:
             return redirect('main')
