@@ -4,7 +4,7 @@
 <head>
     {% load static %}
     <meta charset="UTF-8">
-    <title>Doktor Sahifasi</title>
+    <title>Доктор Саҳифаси</title>
 
 
     <link rel="stylesheet" href="{% static 'main/main.css' %}">
@@ -63,17 +63,20 @@ document.body.onload = function() {
 
 <div class="container" id="salom">
     <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand btn btn-primary text-white"  href="{% url 'addpatient' %}">Янги бемор қабул қилиш</a>
+        <a class="navbar-brand btn btn-primary text-white"  href="{% url 'addpatient' %}">Янги беморни қабул<br> қилиш
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand btn btn-primary text-white" href="{% url 'lastpatient' %}">Якунланмаган беморлар</a>
+        <a class="navbar-brand btn btn-primary text-white" href="{% url 'lastpatient' %}">Ташхислаш якунланмаган<br> беморлар
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand btn btn-primary text-white" href="{% url 'diagnosed-patient' %}">Якунланган беморлар</a>
+        <a class="navbar-brand btn btn-primary text-white" href="{% url 'diagnosed-patient' %}">Якуний ташхис қўйилган<br> беморлар
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -86,7 +89,7 @@ document.body.onload = function() {
                     <a class="nav-link btn btn-primary text-white"  href="{% url 'userpage' %}">{{ request.user.username }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link btn btn btn-primary text-white"  href="{% url 'logout' %}">Log out</a>
+                    <a class="nav-link btn btn btn-primary text-white"  href="{% url 'logout' %}">Чиқиш</a>
                 </li>
             </ul>
         </div>

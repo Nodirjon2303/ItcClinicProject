@@ -4,24 +4,24 @@
     {% csrf_token %}
 <table class="table">
     <tr>
-        <th colspan="2">Administrator login va parolini o'zgartieish oynasi</th>
+        <th colspan="2">Aдминистратор паролини ўзгартириш ойнаси</th>
     </tr>
     <tr>
         <td>
-            Joriy parol
+            Жорий парол
         </td>
         <td><input name="pass1" type="text"></td>
     </tr>
     <tr>
-        <td>Yangi Parol</td>
+        <td>Янги парол</td>
         <td><input name="newpass1" type="text"></td>
     </tr>
     <tr>
-        <td>Parolni qayta kiriting</td>
+        <td>Паролни қайта киритинг</td>
         <td><input name="newpass2" type="text"></td>
     </tr>
 </table>
-<button type="submit" class="ml-4 btn btn-primary">Saqlash</button>
+<button type="submit" class="ml-4 btn btn-primary">Сақлаш</button>
 </form>
 
 <p>{{ error }}</p>

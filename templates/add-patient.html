@@ -6,52 +6,53 @@
     <div class="container">
         <form method="POST">
             {% csrf_token %}
-            <h2 class="text-center">Yangi Bemor qabul qilish </h2>
+            <h2 class="text-center">Беморнинг умумий маълумотларини<br> киритиш ойнаси
+            </h2>
             <div class="row jumbotron">
                 <div class="col-sm-6 form-group">
-                    <label for="last_name">Familyasi</label>
+                    <label for="last_name">Фамиляси</label>
                     <input type="text" class="form-control" name="last_name" id="name-f"
-                           placeholder="Familyasini kiritinig" required>
+                           placeholder="Фамилиясини киритиниг" required>
                 </div>
                 <div class="col-sm-6 form-group">
-                    <label for="first_name">Ismi</label>
-                    <input type="text" class="form-control" name="first_name" id="name-l" placeholder="Ismini kiriting"
+                    <label for="first_name">Исми</label>
+                    <input type="text" class="form-control" name="first_name" id="name-l" placeholder="Исмини киритинг"
                            required>
                 </div>
                 <div class="col-sm-6 form-group">
-                    <label for="first_name">Sharifi</label>
-                    <input type="text" class="form-control" name="middle_name" id="name-l" placeholder="Sharifini kiriting"
+                    <label for="first_name">Шарифи</label>
+                    <input type="text" class="form-control" name="middle_name" id="name-l" placeholder="Шарифини киритинг"
                            required>
                 </div>
                 <div class="col-sm-6 form-group">
-                    <label for="Date">Tugilgan Sanasi</label>
-                    <input type="Date" name="dob" class="form-control" id="Date" placeholder="Tug'ilgan sanangizni kiriting" required>
+                    <label for="Date">Туғилган санаси</label>
+                    <input type="Date" name="dob" class="form-control" id="Date" placeholder="Туғилган санангизни киритинг" required>
                 </div>
 
                 <div class="col-sm-2 form-group">
-                    <label for="cod">Uzbekistan</label>
+                    <label for="cod">Ўзбекистон</label>
                     <select class="form-control browser-default custom-select">
                         <option data-countryCode="UZ" value="998">+998</option>
                     </select>
                 </div>
                 <div class="col-sm-4 form-group">
-                    <label for="tel">Uy telefoni</label>
+                    <label for="tel">Уй телефони</label>
                     <input type="tel" name="home_phone" class="form-control" id="tel"
-                           placeholder="Uy telefonini kiriting." required>
+                           placeholder="Уй телефон рақамини киритинг" required>
                 </div>
                 <div class="col-sm-2 form-group">
-                    <label for="cod">Uzbekistan</label>
+                    <label for="cod">Ўзбекистон</label>
                     <select class="form-control browser-default custom-select">
                         <option data-countryCode="UZ" value="998">Uzb (+998)</option>
                     </select>
                 </div>
                 <div class="col-sm-4 form-group">
-                    <label for="tel">Ish telefoni</label>
+                    <label for="tel">Иш телефони</label>
                     <input type="tel" name="work_phone" class="form-control" id="tel"
-                           placeholder="Ish telefonini kiriting." required>
+                           placeholder="Иш телефон рақамини киритинг" required>
                 </div>
                 <div class="col-sm-6 form-group">
-                    <label for="Region">Viloyat</label>
+                    <label for="Region">Вилояти</label>
                     <select name="viloyat" class="form-control custom-select browser-default">
                         <option value="Toshkent">Toshkent shahri</option>
                         <option value="Andijon">Andijon viloyati</option>
@@ -70,33 +71,33 @@
                     </select>
                 </div>
                 <div class="col-sm-6 form-group">
-                    <label for="address-1">Tuman</label>
+                    <label for="address-1">Тумани</label>
                     <input type="address" class="form-control" name="tuman" id="address-1"
-                           placeholder="Tumanni kiriting" required>
+                           placeholder="Туманни киритинг" required>
                 </div>
                 <div class="col-sm-6 form-group">
-                    <label for="address-2">addresini kiriting</label>
+                    <label for="address-2">Яшаш манзили</label>
                     <input type="address" class="form-control" name="address" id="address-2"
-                           placeholder="Qishloq/Mahalla nomi" required>
+                           placeholder="Қишлоқ/Маҳалла номи" required>
                 </div>
 
 
 
                 <div class="col-sm-4 form-group">
-                    <label for="work">Ish joyi</label>
+                    <label for="work">Иш жойи</label>
                     <input type="Work" name="work_palace" class="form-control" id="work"
-                           placeholder="Bemorning ish joyini kirting">
+                           placeholder="Беморнинг иш жойини киритинг">
                 </div>
                 <div class="col-sm-2 form-group">
-                    <label for="sex">Jinsi</label>
+                    <label for="sex">Жинси</label>
                     <select id="sex" name="gen" class="form-control browser-default custom-select">
-                        <option value="Erkak">Erkak</option>
-                        <option value="Ayol">Ayol</option>
+                        <option value="Erkak">Эркак</option>
+                        <option value="Ayol">Aёл</option>
                     </select>
                 </div>
 
                 <div class="col-sm-12 form-group mb-0">
-                    <button class="btn btn-primary float-right" type="submit">Keyingisi</button>
+                    <button class="btn btn-primary float-right" type="submit">Кейингиси</button>
                 </div>
             </div>
         </form>

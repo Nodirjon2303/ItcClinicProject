@@ -2,13 +2,14 @@
 {% block nodir %}
     <div class="patient">
         <div class="buttons1">
-            <button class="btn1 btn-primary">Умумий малумотлари</button>
-            <button class="btn1 btn-primary" onclick="patient_shikoyat({{ 1 }}, {{ patient.id }})">Шикоят ва анамнез малумотлари
+            <button class="btn1 btn-primary">Бемор ҳақида умумий маълумотлар</button>
+            <button class="btn1 btn-primary" onclick="patient_shikoyat({{ 1 }}, {{ patient.id }})">  Беморнинг шикояти ва анамнез маълумотлари
+
             </button>
             <button class="btn1 btn-primary " onclick="patient_shikoyat({{ 2 }}, {{ patient.id }})">Бирламчи кўрик</button>
             <button class="btn1 btn-primary" onclick="patient_shikoyat({{ 3 }}, {{ patient.id }})">Лабаратория текшируви</button>
-            <button class="btn1 btn-primary" onclick="patient_shikoyat({{ 4 }}, {{ patient.id }})">ЕКГ</button>
-            <button class="btn1 btn-primary" onclick="patient_shikoyat({{ 5 }} , {{ patient.id }})">EXO</button>
+            <button class="btn1 btn-primary" onclick="patient_shikoyat({{ 4 }}, {{ patient.id }})">ЭКГ</button>
+            <button class="btn1 btn-primary" onclick="patient_shikoyat({{ 5 }} , {{ patient.id }})">ЭХО</button>
             <button class="btn1 btn-primary" onclick="patient_shikoyat({{ 6 }}, {{ patient.id }})">Ёндош касалликлар</button>
             <button class="btn1 btn-primary" onclick="patient_shikoyat({{ 7 }}, {{ patient.id }})">Текширувлар таҳлили ва якуний
                 ташхислаш
@@ -19,64 +20,65 @@
         <div class="patient__table1">
             <table id="patient_table">
                 <tr >
-                    <td colspan="90">Bemor haqida malumotlar</td>
+                    <td colspan="90">Бемор ҳақида умумий маълумотлар
+                    </td>
                 </tr>
                 <tr>
-                    <td>Ismi:</td>
+                    <td>Исми:</td>
                     <td>{{ patient.first_name }}</td>
                 </tr>
                 <tr>
-                    <td>Familyasi:</td>
+                    <td>Фамилияси:</td>
                     <td>{{ patient.last_name }}</td>
                 </tr>
                 <tr>
-                    <td>Sharifi:</td>
+                    <td>Шарифи:</td>
                     <td>{{ patient.middle_name }}</td>
                 </tr>
                 <tr>
-                    <td>Tugilgan sanasi:</td>
+                    <td>Туғилган санаси:</td>
                     <td>{{ patient.birthday }}</td>
                 </tr>
                 <tr>
-                    <td>Uy telefoni:</td>
+                    <td>Уй телефони:</td>
                     <td>{{ patient.home_phone }}</td>
                 </tr>
                 <tr>
-                    <td>Ish telefoni:</td>
+                    <td>Иш телефони:</td>
                     <td>{{ patient.work_phone }}</td>
                 </tr>
                 <tr>
-                    <td>Viloyasi</td>
+                    <td>Вилояти:</td>
                     <td>{{ patient.region }}</td>
                 </tr>
                 <tr>
-                    <td>Bemorning tumani:</td>
+                    <td>Тумани:</td>
                     <td>{{ patient.city }}</td>
                 </tr>
                 <tr>
-                    <td>Bemorning manzili:</td>
+                    <td>Яшаш манзили:</td>
                     <td>{{ patient.adress }}</td>
                 </tr>
                 <tr>
-                    <td>Bemorning jinsi:</td>
+                    <td>Жинси:</td>
                     <td>{{ patient.gen }}</td>
                 </tr>
                 <tr>
-                    <td>Bemorning ish joyi:</td>
+                    <td>Иш жойи:</td>
                     <td>{{ patient.work_place }}</td>
                 </tr>
                 <tr>
-                    <td>Bemorning kelgan sanasi:</td>
+                    <td>Қабулга ёзилган сана:</td>
                     <td>{{ patient.created_data }}</td>
                 </tr>
             </table>
         </div>
-        <div class="comment" id="patient-comment">
+        <div class="comment" , id="patient-comment">
 
         </div>
 
     </div>
-    <table class="table patient__tb" , id="finalresult">
+    <table class="table patient__tb" id="finalresult">
 
     </table>
 

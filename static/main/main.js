@@ -1,5 +1,5 @@
-// var link = 'http://127.0.0.1:8000/'
-var link = 'http://137.184.201.8:1212/'
+var link = 'http://127.0.0.1:8000/'
+// var link = 'http://137.184.201.8:7777/'
 // var link = 'http://e-cardiodiagnosis.uz/'
 var preloader = document.getElementById('page-preloader');
 
@@ -25,7 +25,7 @@ function render_class(clas) {
                 preloader.classList.add('done')
                 datas = data['data']
                 html = `<tr>
-        <th colspan="90" id="nodirjon">Etalon o'quv qo'llanma</th>
+        <th colspan="90" id="nodirjon">Эталон ўқув танлама </th>
     </tr>
     <tr>
         <td style="color: green">N</td>
@@ -768,7 +768,7 @@ function render_class_normallashtir(clas) {
                     }
 
                 }
-                html8 = `<a href="${data['document']}" download=""> Excel formatda yuklab olish</a>`
+                html8 = `<a href="${data['document']}" download=""> Ехcел форматда юклаб олиш</a>`
                 document.getElementById('downloadexcel').innerHTML = html8
                 document.getElementById('classobyekt').innerHTML = html
                 document.getElementById('normallashtirish').innerHTML = html2
@@ -797,13 +797,15 @@ function render_class_sinflashtir(patient_id) {
                 datas = data['data']
                 for (let i = 1; i < 6; i++) {
                     html = `<tr>
-        <th colspan="90" id="class${i}">Синфлаштириш натижаси ${i}- cласс учун </th>
+        <th colspan="90" id="class${i}">Синфлаштиришнинг ${i}-синф учун олинган натижалари </th>
     </tr>
  <tr>
  <td>N </td>
  <td>L </td>
- <td>Ўртачаси</td>
- <td>Л бўйича ўртача натижа</td>
+ <td>Синф объектларига нисбатан ўртача қиймат
+ </td>
+ <td>Информатив симптокомплексларга нисбатан ўртача қиймат
+ </td>
  </tr>
 `
                     var dataclass = datas[`class${i}`]
@@ -880,7 +882,7 @@ function patient_shikoyat(id, patient_id) {
                 datas = data['data']
                 html = `<form action="" method="post">
     <tr>
-    <th colspan="3">${datas[0]}</th>
+    <th colspan="4">${datas[0]}</th>
 </tr>
 `
 
@@ -931,10 +933,10 @@ function patient_shikoyat(id, patient_id) {
                 }
                 if (id < 7) {
 
-                    html += `<button onclick="patient_shikoyat(${id + 1}, ${patient_id})" class="next">Keyingisi</button>`
+                    html += `<button onclick="patient_shikoyat(${id + 1}, ${patient_id})" class="next">Кейингиси</button>`
                 }
                 if (id > 1) {
-                    html += `<button onclick="patient_shikoyat(${id - 1}, ${patient_id})" class="prev">Ortga</button>`
+                    html += `<button onclick="patient_shikoyat(${id - 1}, ${patient_id})" class="prev">Ортга</button>`
 
                 }
                 if (id == 7) {
@@ -976,7 +978,8 @@ function admin_result() {
                 datas = data['max']
                 html = `
                 <tr>
-                <th colspan="90">Синфлаштириш қийматларини нормаллаштириш натижалари</th>
+                <th colspan="90">Синфлаштириш қийматларини нормаллаштириш натижалари ва улар асосида қўйилган якуний ташхис
+                </th>
 </tr>
 <tr>
 <td>Class</td>
@@ -1043,7 +1046,7 @@ function patient_tashxislash(patient_id) {
             <td id="finaldiagnos"></td>
         </tr>
         <tr>
-            <td>Шифокор томонидан қўйилган ташхисни киритиш</td>
+            <td>Шифокор томонидан қўйилган ташхис ва тавсиялар</td>
             <td><input onchange="final_diagnos_put(${patient_id}, 'doctor_diagnos')" id="nodirdoctor_diagnos" type="text" value="${data['tashxis']}"></td>
         </tr>
         <tr>
@@ -1055,7 +1058,7 @@ function patient_tashxislash(patient_id) {
             <td><input onchange="final_diagnos_put(${patient_id}, 'partboss')" id="nodirpartboss" type="text" value="${data['partboss']}"></td>
         </tr>
         <tr>
-            <td>Бош врач</td>
+            <td>Бош шифокор</td>
             <td><input onchange="final_diagnos_put(${patient_id}, 'maindoctor')" id="nodirmaindoctor" type="text" value="${data['maindoctor']}"></td>
         </tr>`
                     html3 = `<button onclick="save_patient_informs(${patient_id})" class="patient__btn">Сақлаш</button>`

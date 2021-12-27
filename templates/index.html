@@ -4,11 +4,11 @@
         {% csrf_token %}
 
         <div class="text-center text-primary">
-            <h2 class="pb-4" style="text-align: center">Еталон ўқув танланмани юкланг</h2>
+            <h2 class="pb-4" style="text-align: center">Эталон ўқув танланмани юкланг</h2>
             <input type="file" class="btn bg-primary pt-2"
                    accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
                    name="myfile">
-            <button class="btn btn-primary" type="submit">Faylni yuklash</button>
+            <button class="btn btn-primary" type="submit">Файлни юклаш</button>
             <br>
             <br>
             <p class="pt-4" style="color: red">{{ status }}</p>

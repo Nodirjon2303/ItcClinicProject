@@ -85,7 +85,7 @@ def EtalonView(request):
     if request.user.username and request.user.status == 'admin':
         form = ExcelFileUploudForm()
         context = {
-            'status': "Iltimos excel formatda malumot yuklang",
+            'status': "Илтимос EXCEL форматдаги файлни юкланг",
             'form': form
         }
         if request.method == "POST":

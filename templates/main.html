@@ -3,14 +3,14 @@
 <head>
     {% load static %}
     <meta charset="UTF-8">
-    <title>Mualliflar haqida</title>
+    <title>Бош саҳифа</title>
     <link rel="stylesheet" href="{% static 'main/main.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 </head>
 
 
 
-<body     style="background-image: url('https://www.connexionfrance.com/var/connexion/storage/images/_aliases/social_network_image/media/images/doctor/551577-1-eng-GB/doctor.jpg'); background-repeat: no-repeat; 
+<body     style="background-image: url('https://catherineasquithgallery.com/uploads/posts/2021-03/1614858258_32-p-fon-meditsinskii-33.jpg'); background-repeat: no-repeat; 
 background-size: cover;">
 
 
@@ -23,14 +23,14 @@ background-size: cover;">
 
             <div class="">
                 {% if request.user.status == 'doctor' %}
-                    <a href="{% url 'doctor' %}" class="btn btn-primary singup">Doctor page</a>
-                    <a href="{% url 'logout' %}" class="btn btn-primary login">Log out</a>
+                    <a href="{% url 'doctor' %}" class="btn btn-primary singup">Шифокор саҳифаси</a>
+                    <a href="{% url 'logout' %}" class="btn btn-primary login">Чиқиш</a>
                 {% elif request.user.status == 'admin' %}
-                    <a href="{% url 'admin' %}" class="singup btn btn-primary">Admin page</a>
-                    <a href="{% url 'logout' %}" class="login btn btn-primary">Log out</a>
+                    <a href="{% url 'admin' %}" class="singup btn btn-primary">Aдмин саҳифаси</a>
+                    <a href="{% url 'logout' %}" class="login btn btn-primary">Чиқиш</a>
                 {% else %}
-                    <a href="{% url 'signup' %}" class="singup btn btn-primary">Sign up</a>
-                    <a href="{% url 'login' %}" class="login btn btn-primary">Login</a>
+                    <a href="{% url 'signup' %}" class="singup btn btn-primary">Рўйхатдан ўтиш</a>
+                    <a href="{% url 'login' %}" class="login btn btn-primary">Кириш</a>
                 {% endif %}
             </div>
         </div>
@@ -69,13 +69,13 @@ background-size: cover;">
 <div class="container">
     <div class="row ">
         <div class="col-md-4">
-            <img src="https://avatars.mds.yandex.net/i?id=9a19d9e45fdc8b4205f2a10b89ad48bd-4338366-images-thumbs&n=13" alt=""  width="250px" >
+            <img src="" alt=""  width="250px">
         </div>
         <div class="col-md-4">
-            <img src="https://avatars.mds.yandex.net/i?id=1d9cf0b29902347d9343fc788064b12e-4576810-images-thumbs&n=13" alt=""  width="250px">
+            <img src="https://vrachiryadom.ru/wp-content/uploads/2019/12/1576488410_1576488458.jpg" alt=""  width="250px">
         </div>
         <div class="col-md-4">
-            <img src="https://avatars.mds.yandex.net/i?id=2a0000017a0cf2b92cac607688f7f733faed-4256762-images-thumbs&n=13" alt=""  width="250px">
+            <img src="https://birlab.com.tr/upload/4_6uy.jpg" alt=""  width="250px">
         </div>
     </div>
 </div>
@@ -83,14 +83,14 @@ background-size: cover;">
 <div class="container">
     <div class="row">
         <div class="col-md-6 offset-3">
-            <h1 class="text-primary text-center pt-5">E-ischemic cardio diagnosis</h1>
+            <pre class="text-primary text-center pt-5" style="font-size: 40px; font-family: 'Times New Roman', Times, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; ">  E-ischemic cardio diagnosis</pre>
 
-            <span class="pt-4 text-white text-center rounded-lg" style="display: inline-block; width: 600px; height: 120px; background-color: rgba(0, 13, 255, 0.658);">
+            <h4 class="pt-4 text-white text-center rounded-lg" style="display: inline-block; width: 600px; height: 190px; background-color: rgba(0, 13, 255, 0.658);">
                 Шифокорлар томонидан юрак ишемик касалликларига чалинган
                 беморларга ташхис қўйишларида уларга оқилона қарор қабул
-                қилишлари учун кўмак берувчи замонавий таниб олиш тизими
+                қилишлари учун кўмак берувчи замонавий таниб олувчи тизим
 
-            </span>
+            </h4>
     
         <!-- <div class="pt-5">
             <p class="pt-5 text-primary" style="font-size: 20px;">  Шифокорлар томонидан юрак ишемик касалликларига чалинган

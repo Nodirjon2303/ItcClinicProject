@@ -61,7 +61,7 @@
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="btn btn-primary " style="font-size: 20px"  href="{% url 'simptokompleks' %}">Информатив симптокомплекс</a>
+        <a class="btn btn-primary " style="font-size: 20px"  href="{% url 'simptokompleks' %}">Информатив симптокомплекслар</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -73,10 +73,12 @@
             </a>
 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="{% url 'norm' %}">нормалллаштириш</a>
+                <a class="dropdown-item" href="{% url 'norm' %}">Дастлабки маълумотларни нормаллаштириш
+                </a>
                 <a class="dropdown-item" href="{% url 'nolbir' %}">0 ва 1 қийматга алмаштириш</a>
-                <a class="dropdown-item" href="{% url 'sinfview' %}">Синфлаштириш натижаси</a>
-                <a class="dropdown-item" href="{% url 'resultadmin' %}">Нормаллаштириш</a>
+                <a class="dropdown-item" href="{% url 'sinfview' %}">Синфлаштириш</a>
+                <a class="dropdown-item" href="{% url 'resultadmin' %}">Синфлаштириш натижаларини нормаллаштириш
+                </a>
             </div>
         </div>
 
@@ -88,7 +90,7 @@
                 </li>
                 <li >
                     <a class="btn btn-primary " type="button" href="{% url 'logout' %}" data-toggle="modal"
-                       data-target="#myModal">Log out</a>
+                       data-target="#myModal">Чиқиш</a>
                 </li>
             </ul>
         </div>
