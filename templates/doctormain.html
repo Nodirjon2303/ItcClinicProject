@@ -86,7 +86,7 @@ document.body.onload = function() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto topnav">
                 <li class="nav-item">
-                    <button class="nav-link btn btn-primary text-white"  onclick="{% url 'userpage' %}">{{ request.user.username }}</button>
+                    <a class="nav-link btn btn-primary text-white"  href="{% url 'userpage' %}">{{ request.user.username }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link btn btn btn-primary text-white"  href="{% url 'logout' %}">Чиқиш</a>
