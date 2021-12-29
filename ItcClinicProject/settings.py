@@ -85,9 +85,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'HOST': 'localhost',
-        'NAME': 'fortunabot',
-        'PASSWORD': 'fortunabot',
-        'USER': 'fortunabot'
+        'NAME': 'myproject',
+        'PASSWORD': 'password',
+        'USER': 'myprojectuser'
     }
 }
 
