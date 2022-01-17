@@ -1610,11 +1610,6 @@ def PatientView(request, id):
         for i in range(1, 90):
             if patientcheck[f'x{i}'] == None:
                 bol = False
-
-        if calculus_status.calculus_status == False:
-            return JsonResponse({
-                                    'data': 'Hozirda boshqa shifokor tamonidan hisoblash ishlari olib borilmoqda iltimos 15 daqidan so\'ng qayta urinib ko\'ring'})
-
         if bol:
             patient.status = 'progress'
             calculus_status.calculus_status = False
