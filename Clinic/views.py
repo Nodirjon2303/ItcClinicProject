@@ -1610,7 +1610,10 @@ def PatientView(request, id):
         for i in range(1, 90):
             if patientcheck[f'x{i}'] == None:
                 bol = False
+                break
         if bol:
+            patient.status = 'progress'
+            patient.save()
             for i in range(1, 6):
                 classnorm = Clas.objects.get(name=f'{i}-class')
                 normallashtirish(classnorm, patient.id)
