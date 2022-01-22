@@ -1611,10 +1611,6 @@ def PatientView(request, id):
             if patientcheck[f'x{i}'] == None:
                 bol = False
         if bol:
-            patient.status = 'progress'
-            calculus_status.calculus_status = False
-            calculus_status.save()
-            patient.save()
             for i in range(1, 6):
                 classnorm = Clas.objects.get(name=f'{i}-class')
                 normallashtirish(classnorm, patient.id)
