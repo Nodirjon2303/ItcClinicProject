@@ -5,8 +5,12 @@ from django.contrib.auth.models import AbstractUser, User
 
 
 class CustomUser(AbstractUser):
+    choices = [
+        ('doctor', 'Doctor')
+        ('admin', 'Admin')
+    ]
     companyName = models.CharField(max_length=125, null=True, blank=True)
-    status = models.CharField(max_length=55, null=True, blank=True)
+    status = models.CharField(max_length=55, null=True, blank=True, choices=choices)
 
 class Normallash(models.Model):
     x1 = models.FloatField(null=True, blank=True)

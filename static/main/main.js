@@ -1021,7 +1021,7 @@ function admin_result() {
 
 function patient_tashxislash(patient_id) {
     preloader.classList.remove('done');
-    var url = `${link}patient/3/`
+    var url = `/patient/${patient_id}/`
     fetch(url, {
         method: 'POST',
         headers: {

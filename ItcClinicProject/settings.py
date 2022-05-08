@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Clinic'
+    'Clinic',
+    'jazzmin'
 ]
 
 MIDDLEWARE = [
@@ -85,9 +86,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'HOST': 'localhost',
-        'NAME': 'myproject',
-        'PASSWORD': 'password',
-        'USER': 'myprojectuser'
+        'NAME': 'Clinic',
+        'PASSWORD': 'Nodir2303',
+        'USER': 'namoz'
     }
 }
 
