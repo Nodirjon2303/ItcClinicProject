@@ -86,7 +86,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'HOST': 'localhost',
-        'NAME': 'Clinic',
+        'NAME': 'clinic',
         'PASSWORD': 'Nodir2303',
         'USER': 'namoz'
     }
