@@ -1,5 +1,6 @@
 .env
 .venv
+.tenv
 ### VisualStudioCode template
 .vscode/*
 !.vscode/settings.json
