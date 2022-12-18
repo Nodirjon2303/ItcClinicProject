@@ -19,6 +19,7 @@ urlpatterns = [
     path('add-patients/', addPatientView, name='addpatient'),
     path('diagnosised-patients/', diagnosedPatientView, name='diagnosed-patient'),
     path('patient/<int:id>/', PatientView, name='patient'),
+    path('patient/update/<int:pk>/', PatientUpdateView.as_view(), name='patient-update'),
     path('patient-render-shikoyat/', patient_render_shikoyat, name='rendershikoyat'),
     path('final-result/', final_result, name='finalresult'),
     path('savepatient/', save_patient, name='savepatient'),

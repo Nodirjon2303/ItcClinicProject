@@ -1,0 +1,15 @@
+{% extends 'doctormain.html' %}
+
+{% block nodir %}
+
+    {{ form.errors }}
+
+    <form method="post" action="{% url 'patient-update' object.pk %}">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <input type="submit" value="Submit" />
+
+{% endblock %}

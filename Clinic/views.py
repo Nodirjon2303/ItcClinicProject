@@ -3,8 +3,11 @@ from django.contrib.auth.models import User
 from django.shortcuts import render
 from django.shortcuts import render, redirect, HttpResponse
 from django.contrib.auth import authenticate, login, logout
+from django.urls import reverse
+from django.views.generic import UpdateView
 from openpyxl import Workbook
 
+from .form import PatientUpdateForm
 from .models import *
 from .forms import *
 import openpyxl
@@ -1353,12 +1356,13 @@ def normallashtirish(clas, patient_id):
             'data': etalondatas
             }
 
+
 @admins_only
 def nolbirView(request):
     if request.method == "POST":
         data = json.loads(request.body)
         clas = data['class']
-        classnorm = Clas.objects.get(name = clas)
+        classnorm = Clas.objects.get(name=clas)
         patient = Patient.objects.filter(status='done').last()
         normallashtirish(classnorm, patient.id)
         data = nolbirlashtirish(clas, patient.id)
@@ -1373,9 +1377,6 @@ def nolbirView(request):
         data['document'] = f'/media/nolbir {clas} {patient.last_name}.xlsx'
         return JsonResponse({'data': data})
     return render(request, 'nolbir.html', {})
-
-
-
 
 
 @admins_only
@@ -1411,7 +1412,7 @@ def normView(request):
 def sinflashtirish(patient_id):
     data = {}
     for i in range(1, 6):
-        clas = Clas.objects.get(name = f"{i}-class")
+        clas = Clas.objects.get(name=f"{i}-class")
         print(f'{i}-class uchun sinflashtirish boshlandi')
         simptokomplexs = Simptokompleks.objects.all()
         datasend = []
@@ -1680,6 +1681,15 @@ def PatientView(request, id):
     except:
         return HttpResponse('404 page not found')
     return render(request, 'Patient.html', {'patient': patient})
+
+
+class PatientUpdateView(UpdateView):
+    model = Patient
+    template_name = 'update-patient.html'
+    form_class = PatientUpdateForm
+
+    def get_success_url(self):
+        return reverse('patient', kwargs={'id': self.object.id})
 
 
 @doctors_only
