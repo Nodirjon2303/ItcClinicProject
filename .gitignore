@@ -70,6 +70,7 @@ bld/
 Generated\ Files/
 media/
 .idea/
+.idea
 __pycache__
 # MSTest test Results
 [Tt]est[Rr]esult*/
