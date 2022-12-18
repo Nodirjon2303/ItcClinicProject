@@ -68,8 +68,8 @@ bld/
 
 # Visual Studio 2017 auto generated files
 Generated\ Files/
-media
-.idea
+media/
+.idea/
 __pycache__
 # MSTest test Results
 [Tt]est[Rr]esult*/
