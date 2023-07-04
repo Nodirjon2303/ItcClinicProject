@@ -372,3 +372,9 @@ body {
     border-radius: 5px  ;
 cursor: pointer;
 }
+
+@media only screen and (max-width: 1010px) {
+    .img-class {
+        display: none;
+    }
+}

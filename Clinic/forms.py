@@ -5,13 +5,13 @@ from django import forms
 class CustomUserCreationForm(UserCreationForm):
     class Meta(UserCreationForm):
         model = CustomUser
-        fields = ('username', 'first_name', 'last_name', 'email', 'companyName')
+        fields = ('username', 'first_name', 'last_name', 'email', 'companyName', 'status')
 
 
 class CustomUserChangeForm(UserChangeForm):
     class Meta:
         model = CustomUser
-        fields = ('username', 'first_name', 'last_name', 'email', 'companyName')
+        fields = ('username', 'first_name', 'last_name', 'email', 'companyName', 'status')
 
 class ExcelFileUploudForm(forms.Form):
     file = forms.FileField
