@@ -223,7 +223,7 @@ class Nolbir(models.Model):
     x88 = models.FloatField(null=True, blank=True)
     x89 = models.FloatField(null=True, blank=True)
 
-
+ 
 
 
 
