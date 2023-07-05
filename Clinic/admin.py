@@ -8,6 +8,7 @@ class CustomUserAdmin(UserAdmin):
     form = CustomUserChangeForm
     model = CustomUser
     list_display = [ 'username', 'email','first_name', 'last_name', 'companyName', 'status', 'is_staff']
+    list_editable = ["status", "companyName"]
     fieldsets = UserAdmin.fieldsets+(
         (None, {'fields': ('companyName','status')}),
     )
